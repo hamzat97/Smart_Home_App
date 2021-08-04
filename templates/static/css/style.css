@@ -1,0 +1,175 @@
+body {
+  background-color: #101010;
+}
+
+.myrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  width: 100%;
+}
+
+.mycol {
+  text-align: center;
+  width: 220px;
+  height: 260px;
+}
+
+.widget1 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget1:hover, .widget2:hover, .widget3:hover, .widget4:hover, .widget4:hover, .widget5:hover, .widget6:hover, .widget7:hover, .widget8:hover, .widget9:hover, .widget10:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.widget1 .box, .widget2 .box, .widget3 .box, .widget4 .box, .widget5 .box, .widget6 .box, .widget7 .box, .widget8 .box, .widget9 .box, .widget10 .box {
+  width: 175px;
+  height: 95%;
+}
+
+.widget1 label, .widget2 label, .widget3 label, .widget4 label, .widget5 label, .widget6 label, .widget7 label, .widget8 label, .widget9 label, .widget10 label {
+  margin-top: 35px;
+  position: relative;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.widget1 label .btn, .widget2 label .btn, .widget3 label .btn, .widget4 label .btn, .widget5 label .btn, .widget6 label .btn, .widget7 label .btn, .widget8 label .btn, .widget9 label .btn, .widget10 label .btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1b1b1b;
+  border-radius: 50%;
+  box-shadow: 0 3px 4px black, inset 0 -2px 5px black, inset 0 2px 2px rgba(255, 255, 255, 0.5);
+}
+
+.widget1 label input[type=checkbox], .widget2 label input[type=checkbox], .widget3 label input[type=checkbox], .widget4 label input[type=checkbox], .widget5 label input[type=checkbox], .widget6 label input[type=checkbox], .widget7 label input[type=checkbox], .widget8 label input[type=checkbox], .widget9 label input[type=checkbox], .widget10 label input[type=checkbox] {
+  -webkit-appearance: none;
+}
+
+.widget1 label .fa, .widget2 label .fa, .widget3 label .fa, .widget4 label .fa, .widget5 label .fa, .widget6 label .fa, .widget7 label .fa, .widget8 label .fa, .widget9 label .fa, .widget10 label .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5em;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5, #icon6, #icon7, #icon8, #icon9, #icon10 {
+  font-size: 100px;
+  margin-top: 27px;
+}
+
+.widget2 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget4 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget5 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget6 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget7 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget8 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget9 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.widget10 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25%;
+  background: linear-gradient(0deg, #1b1b1b, #222, #1b1b1b);
+  overflow: hidden;
+  transition: 0.5s;
+}/*# sourceMappingURL=style.css.map */

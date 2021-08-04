@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <title>Smart Home</title>
+ {% load static %}
+ <link rel="icon" type="image/png" size="16x16" href="{% static 'img/logo.png' %}">
+ <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+ <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+ <link rel="stylesheet" href="{% static 'css/style.css' %}">
+ <script src="{% static 'js/jquery-3.1.1.min.js' %}"></script>
+ <script src="{% static 'js/script.js' %}"></script>
+</head>
+
+<body>
+ <div class="container mycontainer">
+  <div class="row justify-content-around myrow">
+   <div class="col-2 mycol">
+    <div class="widget1">
+     <div class="box">
+      <div>
+       <i class="far fa-lightbulb fa-rotate-180" id="icon1"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change1("{{state1.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="col-2 mycol">
+    <div class="widget2">
+     <div class="box">
+      <div>
+       <i class="far fa-lightbulb fa-rotate-180" id="icon2"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change2("{{state2.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="col-2 mycol">
+    <div class="widget3">
+     <div class="box">
+      <div>
+       <i class="far fa-lightbulb fa-rotate-180" id="icon3"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change3("{{state3.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>   
+   </div>
+   <div class="col-2 mycol">     
+    <div class="widget4">
+     <div class="box">
+      <div>
+       <i class="far fa-lightbulb fa-rotate-180" id="icon4"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change4("{{state4.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>    
+   </div>
+   <div class="col-2 mycol"> 
+    <div class="widget5">
+     <div class="box">
+      <div>
+       <i class="far fa-lightbulb fa-rotate-180" id="icon5"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change5("{{state5.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div class="row justify-content-around myrow">
+   <div class="col-2 mycol">
+    <div class="widget6">
+     <div class="box">
+      <div>
+       <i class="fas fa-radiation-alt" id="icon6"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change6("{{state6.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="col-2 mycol">
+    <div class="widget7">
+     <div class="box">
+      <div>
+       <i class="fas fa-door-closed" id="icon7"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change7("{{state7.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-lock"></i>
+      </label>
+     </div>
+    </div>
+   </div>
+   <div class="col-2 mycol">
+    <div class="widget8">
+     <div class="box">
+      <div>
+       <i class="fas fa-car-garage" id="icon8"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change8("{{state8.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-lock"></i>
+      </label>
+     </div>
+    </div>   
+   </div>
+   <div class="col-2 mycol">     
+    <div class="widget9">
+     <div class="box">
+      <div>
+       <i class="fas fa-dungeon" id="icon9"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change9("{{state9.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-lock"></i>
+      </label>
+     </div>
+    </div>    
+   </div>
+   <div class="col-2 mycol"> 
+    <div class="widget10">
+     <div class="box">
+      <div>
+       <i class="fas fa-webcam" id="icon10"></i>
+      </div>
+      <label>
+       <input type="checkbox" onclick='change10("{{state10.id}}",this);'>
+       <span class="btn"></span>
+       <i class="fa fa-power-off"></i>
+       </label>
+     </div>
+    </div>
+   </div>
+  </div>  
+ </div>
+</body>
+
+<script>
+  $(document).ready(function(){
+   if ( {{state1.State}} == 0 ) { 
+     $(".widget1").css({"box-shadow": "1px 1px 3px 2px white", "-webkit-box-shadow": "1px 1px 3px 2px white", "-moz-box-shadow": "1px 1px 3px 2px white"});
+     $("#icon1").css({"color": "white"});
+     $(".widget1 label .fa").css({"color": "white"});
+   }
+   else {
+     $(".widget1").css({"box-shadow": "1px 1px 3px 2px yellow", "-webkit-box-shadow": "1px 1px 3px 2px yellow", "-moz-box-shadow": "1px 1px 3px 2px yellow"});
+     $("#icon1").css({"color": "yellow"});
+     $(".widget1 label .fa").css({"color": "yellow"}); 
+   }
+   if ( {{state2.State}} == 0 ) { 
+     $(".widget2").css({"box-shadow": "1px 1px 3px 2px white", "-webkit-box-shadow": "1px 1px 3px 2px white", "-moz-box-shadow": "1px 1px 3px 2px white"});
+     $("#icon2").css({"color": "white"});
+     $(".widget2 label .fa").css({"color": "white"});
+   }
+   else {
+     $(".widget2").css({"box-shadow": "1px 1px 3px 2px yellow", "-webkit-box-shadow": "1px 1px 3px 2px yellow", "-moz-box-shadow": "1px 1px 3px 2px yellow"});
+     $("#icon2").css({"color": "yellow"});
+     $(".widget2 label .fa").css({"color": "yellow"}); 
+   }
+   if ( {{state3.State}} == 0 ) { 
+     $(".widget3").css({"box-shadow": "1px 1px 3px 2px white", "-webkit-box-shadow": "1px 1px 3px 2px white", "-moz-box-shadow": "1px 1px 3px 2px white"});
+     $("#icon3").css({"color": "white"});
+     $(".widget3 label .fa").css({"color": "white"});
+   }
+   else {
+     $(".widget3").css({"box-shadow": "1px 1px 3px 2px yellow", "-webkit-box-shadow": "1px 1px 3px 2px yellow", "-moz-box-shadow": "1px 1px 3px 2px yellow"});
+     $("#icon3").css({"color": "yellow"});
+     $(".widget3 label .fa").css({"color": "yellow"}); 
+   }
+   if ( {{state4.State}} == 0 ) { 
+     $(".widget4").css({"box-shadow": "1px 1px 3px 2px white", "-webkit-box-shadow": "1px 1px 3px 2px white", "-moz-box-shadow": "1px 1px 3px 2px white"});
+     $("#icon4").css({"color": "white"});
+     $(".widget4 label .fa").css({"color": "white"});
+   }
+   else {
+     $(".widget4").css({"box-shadow": "1px 1px 3px 2px yellow", "-webkit-box-shadow": "1px 1px 3px 2px yellow", "-moz-box-shadow": "1px 1px 3px 2px yellow"});
+     $("#icon4").css({"color": "yellow"});
+     $(".widget4 label .fa").css({"color": "yellow"}); 
+   }
+   if ( {{state5.State}} == 0 ) { 
+     $(".widget5").css({"box-shadow": "1px 1px 3px 2px white", "-webkit-box-shadow": "1px 1px 3px 2px white", "-moz-box-shadow": "1px 1px 3px 2px white"});
+     $("#icon5").css({"color": "white"});
+     $(".widget5 label .fa").css({"color": "white"});
+   }
+   else {
+     $(".widget5").css({"box-shadow": "1px 1px 3px 2px yellow", "-webkit-box-shadow": "1px 1px 3px 2px yellow", "-moz-box-shadow": "1px 1px 3px 2px yellow"});
+     $("#icon5").css({"color": "yellow"});
+     $(".widget5 label .fa").css({"color": "yellow"}); 
+   }
+   if ( {{state6.State}} == 0 ) { 
+     $(".widget6").css({"box-shadow": "1px 1px 3px 2px red", "-webkit-box-shadow": "1px 1px 3px 2px red", "-moz-box-shadow": "1px 1px 3px 2px red"});
+     $("#icon6").css({"color": "red"});
+     $(".widget6 label .fa").css({"color": "red"});
+   }
+   else {
+     $(".widget6").css({"box-shadow": "1px 1px 3px 2px #48EA8B", "-webkit-box-shadow": "1px 1px 3px 2px #48EA8B", "-moz-box-shadow": "1px 1px 3px 2px #48EA8B"});
+     $("#icon6").css({"color": "#48EA8B"});
+     $(".widget6 label .fa").css({"color": "#48EA8B"}); 
+   }
+   if ( {{state7.State}} == 0 ) { 
+     $(".widget7").css({"box-shadow": "1px 1px 3px 2px red", "-webkit-box-shadow": "1px 1px 3px 2px red", "-moz-box-shadow": "1px 1px 3px 2px red"});
+     $("#icon7").css({"color": "red"});
+     $(".widget7 label .fa").css({"color": "red"});
+   }
+   else {
+     $(".widget7").css({"box-shadow": "1px 1px 3px 2px #48EA8B", "-webkit-box-shadow": "1px 1px 3px 2px #48EA8B", "-moz-box-shadow": "1px 1px 3px 2px #48EA8B"});
+     $("#icon7").css({"color": "#48EA8B"});
+     $(".widget7 label .fa").css({"color": "#48EA8B"}); 
+   }
+   if ( {{state8.State}} == 0 ) { 
+     $(".widget8").css({"box-shadow": "1px 1px 3px 2px red", "-webkit-box-shadow": "1px 1px 3px 2px red", "-moz-box-shadow": "1px 1px 3px 2px red"});
+     $("#icon8").css({"color": "red"});
+     $(".widget8 label .fa").css({"color": "red"});
+   }
+   else {
+     $(".widget8").css({"box-shadow": "1px 1px 3px 2px #48EA8B", "-webkit-box-shadow": "1px 1px 3px 2px #48EA8B", "-moz-box-shadow": "1px 1px 3px 2px #48EA8B"});
+     $("#icon8").css({"color": "#48EA8B"});
+     $(".widget8 label .fa").css({"color": "#48EA8B"}); 
+   }
+   if ( {{state9.State}} == 0 ) { 
+     $(".widget9").css({"box-shadow": "1px 1px 3px 2px red", "-webkit-box-shadow": "1px 1px 3px 2px red", "-moz-box-shadow": "1px 1px 3px 2px red"});
+     $("#icon9").css({"color": "red"});
+     $(".widget9 label .fa").css({"color": "red"});
+   }
+   else {
+     $(".widget9").css({"box-shadow": "1px 1px 3px 2px #48EA8B", "-webkit-box-shadow": "1px 1px 3px 2px #48EA8B", "-moz-box-shadow": "1px 1px 3px 2px #48EA8B"});
+     $("#icon9").css({"color": "#48EA8B"});
+     $(".widget9 label .fa").css({"color": "#48EA8B"}); 
+   }
+   if ( {{state10.State}} == 0 ) { 
+     $(".widget10").css({"box-shadow": "1px 1px 3px 2px red", "-webkit-box-shadow": "1px 1px 3px 2px red", "-moz-box-shadow": "1px 1px 3px 2px red"});
+     $("#icon10").css({"color": "red"});
+     $(".widget10 label .fa").css({"color": "red"});
+   }
+   else {
+     $(".widget10").css({"box-shadow": "1px 1px 3px 2px #48EA8B", "-webkit-box-shadow": "1px 1px 3px 2px #48EA8B", "-moz-box-shadow": "1px 1px 3px 2px #48EA8B"});
+     $("#icon10").css({"color": "#48EA8B"});
+     $(".widget10 label .fa").css({"color": "#48EA8B"}); 
+   }
+  })
+</script>
+</html>      
