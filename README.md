@@ -5,4 +5,4 @@ Smart home is a residence that uses internet-connected devices and allows homeow
 - Deploy the application on a Web server so that it can be executed through a Web browser.
 - The gateway must call the API integrated in the application, periodically and in realtime, to execute the new orders immediately.    
 
-he devices to be controlled remotely in this application are just as an example, this is why mostly this application needs some modifications to make it in line with your specific needs. These modifications can be made very easily and without any kind of complexity and I remain at your entire disposal, just contact me on my personal Gmail hamzataous847@gmail.com if you have any questions or if you need help. 
+The devices to be controlled remotely in this application are just as an example, this is why mostly this application needs some modifications to make it in line with your specific needs. These modifications can be made very easily and without any kind of complexity and I remain at your entire disposal, just contact me on my personal Gmail hamzataous847@gmail.com if you have any questions or if you need help. 
